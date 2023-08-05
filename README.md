@@ -12,9 +12,9 @@ ros2 action send_goal /joint_trajectory_controller/follow_joint_trajectory contr
   trajectory: {
     joint_names: [joint1, joint2],
     points: [
-      { positions: [1.5, 1.5], time_from_start: { sec: 2 } },
+      { positions: [1.57, 1.57], time_from_start: { sec: 2 } },
       { positions: [2.0, 0.0], time_from_start: { sec: 4 } },
-      { positions: [1.5, 1.5], time_from_start: { sec: 6 } }
+      { positions: [1.57, 1.57], time_from_start: { sec: 6 } }
     ]
   }
 }"
