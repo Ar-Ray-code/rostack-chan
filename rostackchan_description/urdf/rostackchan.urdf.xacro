@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="rostackchan" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find rostackchan_description)/urdf/rostackchan.xacro" />
+  <xacro:include filename="$(find rostackchan_description)/urdf/rostackchan.ros2_control.xacro" />
+
+  <link name="world"/>
+
+  <xacro:rostackchan parent="world">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:rostackchan>
+
+  <xacro:rostackchan_ros2_control name="rostackchan_ros2_control" />
+</robot>

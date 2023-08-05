@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="rostackchan_ros2_control" params="name">
+
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>feetech_scs_hardware/FeetechScsHardware</plugin>
+        <param name="usb_port">/dev/ttyUSB0</param>
+        <param name="baud_rate">1000000</param>
+      </hardware>
+      <joint name="joint1">
+        <param name="id">1</param>
+        <command_interface name="position">
+          <param name="min">0.0</param>
+          <param name="max">2.0</param>
+        </command_interface>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+      <joint name="joint2">
+        <param name="id">2</param>
+        <command_interface name="position">
+          <param name="min">1.4</param>
+          <param name="max">2.0</param>
+        </command_interface>
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+        <state_interface name="effort"/>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>
