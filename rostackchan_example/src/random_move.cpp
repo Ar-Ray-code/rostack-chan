@@ -18,7 +18,7 @@
 #include <rclcpp_action/rclcpp_action.hpp>
 #include <control_msgs/action/follow_joint_trajectory.hpp>
 
-namespace rostackchan_motions
+namespace rostackchan_example
 {
     class RandomMove : public rclcpp::Node
     {
@@ -129,12 +129,12 @@ namespace rostackchan_motions
             return dist(engine);
         }
     };
-} // namespace rostackchan_motions
+} // namespace rostackchan_example
 
 int main(int argc, char **argv)
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<rostackchan_motions::RandomMove>();
+    auto node = std::make_shared<rostackchan_example::RandomMove>();
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;

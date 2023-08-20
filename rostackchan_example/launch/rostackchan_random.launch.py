@@ -15,15 +15,24 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
+from launch.actions import IncludeLaunchDescription, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
+
 
 def generate_launch_description():
     rostackchan_dir = get_package_share_directory('rostackchan_description')
 
     rostackchan_ros2_control = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(rostackchan_dir, 'launch', 'rostackchan.launch.py')),
+        PythonLaunchDescriptionSource(os.path.join(
+            rostackchan_dir, 'launch', 'rostackchan.launch.py')),
+    )
+
+    random_face = Node(
+        package='rostackchan_example',
+        executable='random_face',
+        name='random_face',
+        output='screen'
     )
 
     random_move = Node(
@@ -34,6 +43,7 @@ def generate_launch_description():
     )
 
     ld = LaunchDescription()
-    ld.add_action(rostackchan_ros2_control)
+    ld.add_action(random_face)
     ld.add_action(random_move)
+    ld.add_action(rostackchan_ros2_control)
     return ld

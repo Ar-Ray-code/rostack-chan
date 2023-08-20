@@ -21,6 +21,9 @@ ament_auto_find_build_dependencies()
 set(TARGET random_move)
 ament_auto_add_executable(${TARGET} ./src/${TARGET}.cpp)
 
+set(TARGET random_face)
+ament_auto_add_executable(${TARGET} ./src/${TARGET}.cpp)
+
 ament_auto_package(INSTALL_TO_SHARE
   launch
 )
