@@ -82,6 +82,11 @@ source ~/ws_rostackchan/install/setup.bash
 ros2 launch rostackchan_example rostackchan_random.launch.py
 ```
 
+## dpkg
+
+- [Humble](https://s3.ap-northeast-1.wasabisys.com/download-raw/dpkg/ros2-desktop/debian/bullseye/ros-humble-desktop-rostackchan-full-0.3.2_20230825_arm64.deb)
+- [Iron](https://s3.ap-northeast-1.wasabisys.com/download-raw/dpkg/ros2-desktop/debian/bullseye/ros-iron-desktop-rostackchan-full-0.3.2_20230825_arm64.deb)
+
 ## reference
 
 - https://github.com/meganetaaan/stack-chan
