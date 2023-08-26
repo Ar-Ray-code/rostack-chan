@@ -84,6 +84,10 @@ ros2 launch rostackchan_example rostackchan_random.launch.py
 
 ## dpkg
 
+⚠️ 動作確認を行っていません。
+
+rostackchan_exampleを含むセンサパッケージがビルドされています。（詳しくは　[rpi-bullseye-ros2](https://github.com/Ar-Ray-code/rpi-bullseye-ros2/tree/main/repos)） を確認してください。
+
 - [Humble](https://s3.ap-northeast-1.wasabisys.com/download-raw/dpkg/ros2-desktop/debian/bullseye/ros-humble-desktop-rostackchan-full-0.3.2_20230825_arm64.deb)
 - [Iron](https://s3.ap-northeast-1.wasabisys.com/download-raw/dpkg/ros2-desktop/debian/bullseye/ros-iron-desktop-rostackchan-full-0.3.2_20230825_arm64.deb)
 
